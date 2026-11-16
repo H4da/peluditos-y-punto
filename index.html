@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peluditos y Punto - Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+  <div class="nav-container">
+    <!-- LOGO A LA IZQUIERDA -->
+    <a href="index.html" class="logo-wrapper">
+      <img src="img/logo.png" alt="Peluditos y Punto" class="logo-img">
+    </a>
+
+    <!-- ENLACES CENTRALES -->
+<nav class="nav-links">
+  <a href="index.html" class="nav-item active">Inicio</a>
+  <a href="blog.html" class="nav-item">Blog</a>
+  
+  <div class="dropdown">
+    <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+    
+    <!-- Submenú Desplegable -->
+    <div class="dropdown-menu">
+      <a href="tienda-pod.html" class="dropdown-item">Productos Personalizados (POD)</a>
+      <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+    </div>
+  </div>
+</nav>
+
+    <!-- BOTÓN DE INICIO DE SESIÓN A LA DERECHA -->
+    <div class="nav-auth">
+      <a href="login.html" class="btn-login">Inicio de Sesión</a>
+    </div>
+  </div>
+</header>
+
+  <!-- SECCIÓN HERO  -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">Todo para tu mejor<br>amigo, en un solo punto.</h1>
+        <p class="hero-subtitle">
+          Contenido experto para el cuidado de tu<br>mascota y productos personalizados exclusivos.
+        </p>
+        <a href="tienda-pod.html" class="btn-orange">Explorar Tienda &rarr;</a>
+      </div>
+
+      <!-- TARJETAS INFERIORES -->
+      <div class="hero-features">
+        <a class="feature-item" href="blog.html?categoria=Nutrici%C3%B3n">
+          <div class="feature-icon">
+            <!-- Icono circulo -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+          </div>
+          <h3>Nutrición Premium</h3>
+          <p>Análisis de las mejores marcas del mercado.</p>
+        </a>
+
+        <a class="feature-item" href="tienda-pod.html">
+          <div class="feature-icon">
+            <!-- Icono Estrella -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3 class="active-title">Diseños Personalizados </h3>
+          <p>Tu mascota en camisetas, tazas y más accesorios.</p>
+        </a>
+
+        <a class="feature-item" href="blog.html?categoria=Salud%20y%20bienestar">
+          <div class="feature-icon">
+            <!-- Icono Corazón -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Salud & Bienestar</h3>
+          <p>Guías veterinarias de 2026 para el cuidado integral.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

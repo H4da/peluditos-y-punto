@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restablecer Contraseña - Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tienda-extra.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!--  ENCABEZADO  -->
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo Peluditos y Punto" class="logo-img">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+
+        <div class="dropdown">
+          <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="tienda-pod.html" class="dropdown-item">Productos Personalizados</a>
+            <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="login.html" class="btn-login">Inicio de Sesión</a>
+
+    </div>
+  </nav>
+
+  <!-- RESTABLECER CONTRASEÑA -->
+  <main class="auth-container">
+
+    <div class="auth-banner">
+      <div class="auth-banner-content">
+        <h1 class="auth-banner-title">¿Olvidaste tu contraseña?</h1>
+        <p class="auth-banner-text">
+          No te preocupes, les pasa a los mejores. Te enviaremos un enlace seguro para que vuelvas a entrar y sigas consintiendo a tu peludito.
+        </p>
+      </div>
+    </div>
+
+    <div class="auth-form-container">
+      <div class="auth-form-header">
+        <span class="auth-subtitle">RECUPERACIÓN</span>
+        <h2 class="auth-title">Restablecer contraseña</h2>
+        <p class="auth-desc">Ingresa el correo con el que te registraste y te enviaremos las instrucciones para crear una nueva contraseña.</p>
+      </div>
+
+      <form class="auth-form" id="recoverForm" novalidate>
+        <div class="form-group">
+          <label for="email" class="form-label">Correo electrónico *</label>
+          <div class="input-icon-wrapper">
+            <span class="input-icon">✉</span>
+            <input type="email" id="email" name="email" class="form-input" placeholder="usuario@correo.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <!-- Mensaje de confirmación al enviar -->
+        <p class="recover-msg" id="recoverMsg" role="status" aria-live="polite" hidden>
+          Si el correo está registrado, recibirás un enlace de recuperación en unos minutos. Revisa también tu carpeta de spam.
+          <!-- para la demo: este enlace llegaría por correo -->
+          <br><a href="nueva-contrasena.html" class="register-link">Demo: abrir el enlace del correo &rarr;</a>
+        </p>
+
+        <button type="submit" class="btn-submit">Enviar enlace de recuperación &rarr;</button>
+
+        <div class="form-footer">
+          <p><a href="login.html" class="register-link">&larr; Volver a inicio de sesión</a></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/tienda-extra.js"></script>
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

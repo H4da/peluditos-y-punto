@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artículo | Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="page-blog">
+
+  <!--  ENCABEZADO (mismas clases que index.html)  -->
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo Peluditos y Punto" class="logo-img">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item active">Blog</a>
+
+        <div class="dropdown">
+          <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="tienda-pod.html" class="dropdown-item">Productos Personalizados</a>
+            <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visitante - Pendiente (sesión activa mostrará Perfil y Carrito) -->
+      <a href="login.html" class="btn-login">Iniciar Sesión</a>
+
+    </div>
+  </nav>
+
+  <!--  CONTENIDO PRINCIPAL  -->
+  <main class="site-main">
+
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="blog.html">Blog</a> / <span id="bc-categoria">Nutrición</span>
+    </nav>
+
+    <header class="blog-header">
+      <div>
+        <p class="blog-title">Blog</p>
+        <p>Últimas noticias, guías e historias.</p>
+      </div>
+      <form class="blog-search" id="form-busqueda" role="search">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" name="q" placeholder="Buscar artículos..." aria-label="Buscar artículos">
+      </form>
+    </header>
+
+    <div class="blog-layout">
+
+      <!--  Artículo  -->
+      <article class="card article" id="articulo">
+        <div class="article-cover" id="articulo-portada"></div>
+        <div class="article-body">
+          <div class="meta">
+            <span class="badge" id="articulo-categoria"></span>
+            <time id="articulo-fecha"></time>
+          </div>
+          <h1 class="article-title" id="articulo-titulo"></h1>
+          <div class="article-content" id="articulo-contenido"></div>
+        </div>
+      </article>
+
+      <!--  Barra lateral  -->
+      <aside class="blog-sidebar" aria-label="Barra lateral">
+        <section class="widget">
+          <h2>Categorías</h2>
+          <ul class="cat-list" id="blog-categorias"></ul>
+        </section>
+
+        <section class="widget">
+          <h2>Top Artículos</h2>
+          <ul class="top-list" id="blog-top"></ul>
+        </section>
+
+        <!-- Productos afiliados (desde articulos.js) -->
+        <div id="blog-afiliados"></div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!--  SUSCRIPCIÓN AL BOLETÍN  -->
+  <section class="newsletter" aria-labelledby="boletin-titulo">
+    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+    <h2 id="boletin-titulo">Suscríbete a nuestro boletín</h2>
+    <p>Recibe los últimos artículos, tips de entrenamiento y ofertas exclusivas directo en tu correo.</p>
+    <form class="newsletter-form" id="form-boletin">
+      <label for="correo-boletin" class="sr-only">Correo electrónico</label>
+      <input type="email" id="correo-boletin" name="correo" placeholder="Ingresa tu dirección de correo electrónico" required>
+      <button type="submit" class="btn btn-primary">Suscribirse</button>
+    </form>
+    <p class="newsletter-msg" id="boletin-mensaje" role="status"></p>
+  </section>
+
+  <!--  PIE DE PÁGINA  -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-name">Peluditos y Punto</p>
+        <p class="footer-copy">&copy; 2026 Peluditos y Punto. Todos los derechos reservados.</p>
+      </div>
+      <nav class="footer-links" aria-label="Enlaces legales">
+        <a href="contacto.html">Contáctanos</a>
+        <a href="privacidad.html">Política de privacidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/articulos.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

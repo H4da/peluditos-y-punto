@@ -1,0 +1,61 @@
+/* Páginas nuevas del panel: pedidos, formulario de producto y afiliados */
+.adm .grid-form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.adm .grid-form .span-2 { grid-column: 1 / -1; }
+.adm .form-layout { display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: start; }
+.adm .checks { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.adm .checks label { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; font-size: 14px; }
+.adm .img-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.adm .img-slot { position: relative; display: grid; place-items: center; aspect-ratio: 1; overflow: hidden; text-align: center; font-size: 12px; color: var(--text-soft); background: #F8FAFC; border: 2px dashed #CBD5E1; border-radius: 8px; cursor: pointer; }
+.adm .img-slot:hover { border-color: var(--orange); }
+.adm .img-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.adm .img-slot input { display: none; }
+.adm .var-table input { padding: 6px 8px; }
+.adm .msg-ok { padding: 12px 16px; color: var(--ok); background: var(--ok-bg); border-radius: 8px; font-weight: 600; }
+.adm .msg-ok[hidden] { display: none; }
+.adm .err { display: none; font-size: 12px; color: var(--danger); }
+.adm .field.invalid .input, .adm .field.invalid .select, .adm .field.invalid .textarea { border-color: var(--danger); }
+.adm .field.invalid .err { display: block; }
+.adm .sum-row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; font-size: 14px; }
+.adm .sum-row.total { margin-top: 6px; padding-top: 12px; font-size: 16px; font-weight: 700; color: var(--navy); border-top: 1px solid var(--border); }
+.adm .person { padding: 14px; margin-top: 12px; background: #FFF8EC; border: 1px solid #F6D9A4; border-radius: 8px; font-size: 14px; }
+.adm .person dt { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #92400E; }
+.adm .person dd { margin: 0 0 8px; }
+.adm .person img { display: block; width: 96px; height: 96px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
+.adm .item-line { display: flex; gap: 14px; padding: 16px 22px; border-bottom: 1px solid var(--border); }
+.adm .item-line:last-child { border-bottom: 0; }
+.adm .item-line > img { flex: none; width: 64px; height: 64px; object-fit: cover; border: 1px solid var(--border); border-radius: 8px; }
+.adm .item-line .info { flex: 1; min-width: 0; }
+.adm .item-line .info small { display: block; color: var(--text-soft); }
+.adm .info-list p { margin: 0 0 6px; font-size: 14px; }
+.adm .num-click { font-weight: 700; color: var(--navy); }
+
+/* Ventana para crear/editar */
+.adm dialog { width: min(560px, calc(100% - 32px)); padding: 0; border: 0; border-radius: 12px; box-shadow: 0 20px 50px rgba(15,23,42,.3); }
+.adm dialog::backdrop { background: rgba(15,23,42,.55); }
+.adm dialog form { display: flex; flex-direction: column; }
+.adm dialog .dlg-body { padding: 22px; display: grid; gap: 16px; }
+.adm dialog .dlg-foot { display: flex; justify-content: flex-end; gap: 10px; padding: 14px 22px; background: #F8FAFC; border-top: 1px solid var(--border); border-radius: 0 0 12px 12px; }
+.adm .empty-row td { padding: 36px 22px; text-align: center; color: var(--text-soft); }
+
+@media (max-width: 1100px) { .adm .form-layout { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .adm .grid-form { grid-template-columns: 1fr; } }
+
+/* Paginador de demostración (números que no navegan) */
+.adm .pager-nums span { min-width: 32px; padding: 5px 8px; text-align: center; font-weight: 600; color: var(--navy); border: 1px solid var(--border); border-radius: 6px; }
+.adm .pager-nums span.is-active { background: var(--orange); border-color: var(--orange); }
+.adm .badge-muted.is-baja { color: var(--text-soft); background: #F1F5F9; }
+
+/* Tablas del panel: que las acciones no se salgan del marco */
+.adm table.data th, .adm table.data td { padding-left: 14px; padding-right: 14px; }
+.adm table.data th:first-child, .adm table.data td:first-child { padding-left: 20px; }
+.adm table.data th:last-child, .adm table.data td:last-child { padding-right: 20px; }
+.adm .prod-cell { min-width: 150px; }
+.adm table.data td:last-child .row-actions { flex-direction: column; align-items: stretch; width: 104px; margin-left: auto; }
+.adm table.data td:last-child .row-actions .btn { width: 100%; padding-left: 8px; padding-right: 8px; white-space: nowrap; }
+.adm .row-actions .btn-sm { font-size: 12.5px; }
+
+/* Paginador funcional */
+.adm .pager-nums button { min-width: 32px; padding: 5px 8px; font: inherit; font-weight: 600; color: var(--navy); background: var(--white); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
+.adm .pager-nums button:hover:not(.is-active):not(:disabled) { background: #F1F5F9; }
+.adm .pager-nums button.is-active { background: var(--orange); border-color: var(--orange); }
+.adm .pager-nums button:disabled { opacity: .45; cursor: not-allowed; }

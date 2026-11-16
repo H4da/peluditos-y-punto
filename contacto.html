@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/paginas-extra.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="page-extra">
+
+  <!--  ENCABEZADO  -->
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo Peluditos y Punto" class="logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="tienda-pod.html" class="dropdown-item">Productos Personalizados</a>
+            <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+          </div>
+        </div>
+      </div>
+      <a href="login.html" class="btn-login">Inicio de Sesión</a>
+    </div>
+  </nav>
+
+  <main class="pe-main">
+    <nav class="pe-crumbs" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a> / <span>Contacto</span>
+    </nav>
+    <header class="pe-head">
+      <h1>Contáctanos</h1>
+      <p>¿Dudas sobre un pedido, un diseño o una alianza? Escríbenos y te respondemos en máximo 2 días hábiles.</p>
+    </header>
+
+    <div class="pe-contact">
+      <section class="pe-card pe-info" aria-labelledby="info-t">
+        <h2 id="info-t">Información</h2>
+        <dl>
+          <dt>Correo</dt><dd>hola@peluditosypunto.co</dd>
+          <dt>WhatsApp</dt><dd>+57 300 000 0000</dd>
+          <dt>Horario</dt><dd>Lunes a viernes, 8:00 a. m. – 5:00 p. m.</dd>
+          <dt>Ubicación</dt><dd>Colombia · Envíos a todo el país</dd>
+        </dl>
+        <p style="margin-top:18px"><a href="envios-y-devoluciones.html">Consulta envíos y devoluciones</a></p>
+      </section>
+
+      <section class="pe-card pe-formbox" aria-labelledby="form-t">
+        <h2 id="form-t">Envíanos un mensaje</h2>
+        <form id="contactForm" novalidate>
+          <div class="pe-field">
+            <label for="c-nombre">Nombre *</label>
+            <input class="pe-input" type="text" id="c-nombre" required autocomplete="name">
+            <span class="pe-error">Escribe tu nombre.</span>
+          </div>
+          <div class="pe-field">
+            <label for="c-correo">Correo electrónico *</label>
+            <input class="pe-input" type="email" id="c-correo" required autocomplete="email">
+            <span class="pe-error">Escribe un correo válido.</span>
+          </div>
+          <div class="pe-field">
+            <label for="c-asunto">Asunto *</label>
+            <select class="pe-input" id="c-asunto" required>
+              <option value="">Selecciona una opción</option>
+              <option>Estado de mi pedido</option>
+              <option>Cambios o devoluciones</option>
+              <option>Pregunta sobre un producto</option>
+              <option>Alianzas y marcas aliadas</option>
+              <option>Otro</option>
+            </select>
+            <span class="pe-error">Elige un asunto.</span>
+          </div>
+          <div class="pe-field">
+            <label for="c-mensaje">Mensaje *</label>
+            <textarea class="pe-input" id="c-mensaje" required></textarea>
+            <span class="pe-error">Cuéntanos en qué podemos ayudarte.</span>
+          </div>
+          <button type="submit" class="pe-btn">Enviar mensaje</button>
+          <p class="pe-ok" id="contactOk" role="status" aria-live="polite" hidden>¡Gracias! Recibimos tu mensaje y te responderemos pronto.</p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-name">Peluditos y Punto</p>
+        <p class="footer-copy">&copy; 2026 Peluditos y Punto. Todos los derechos reservados.</p>
+      </div>
+      <nav class="footer-links" aria-label="Enlaces legales">
+        <a href="contacto.html">Contáctanos</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="terminos.html">Términos y condiciones</a>
+        <a href="envios-y-devoluciones.html">Envíos y devoluciones</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/paginas-extra.js"></script>
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

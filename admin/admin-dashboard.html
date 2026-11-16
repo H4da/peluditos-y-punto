@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Admin Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/admin.css">
+  <script src="../js/sesion-demo.js"></script>
+  <link rel="icon" type="image/png" href="../img/logo.png">
+</head>
+<body class="adm">
+
+   <!--  BARRA LATERAL FIJA  -->
+  <aside class="adm-side" aria-label="Navegación del panel">
+    <a href="admin-dashboard.html" class="adm-brand">
+      <img src="../img/logo.png" alt="Peluditos y Punto">
+      <span><strong>Peluditos y Punto</strong><small>Panel de administración</small></span>
+    </a>
+    <nav class="adm-nav">
+      <a href="admin-dashboard.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+      <a href="admin-productos.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>Gestión de productos</a>
+      <a href="admin-pedidos.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Pedidos</a>
+      <a href="admin-afiliados.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Afiliados</a>
+      <a href="admin-blog.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 11h8M8 15h8M8 7h4"/></svg>Gestión del blog</a>
+      <a href="admin-estadisticas.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Estadísticas y ventas</a>
+    </nav>
+    <div class="adm-side-foot">
+      <a href="../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><path d="M9 20v-6h6v6"/></svg> &nbsp;Ver tienda</a>
+      <a href="../login.html" data-salir><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg> &nbsp;Cerrar sesión</a>
+    </div>
+  </aside>
+
+  <div class="adm-main">
+    <header class="adm-top">
+      <div><h1>Dashboard</h1><p>Resumen general de la plataforma</p></div>
+      <div class="adm-top-actions">
+        
+        <div class="adm-user"><span class="av" aria-hidden="true">A</span><span><strong>Administrador</strong><small>admin@peluditosypunto.co</small></span></div>
+      </div>
+    </header>
+
+    <main class="adm-content">
+
+      <section class="kpis" aria-label="Indicadores clave">
+        <article class="card kpi"><p class="kpi-label">Ventas totales</p><p class="kpi-value">$12.480.000</p><p class="delta up">▲ 12,4% <small>vs. mes anterior</small></p></article>
+        <article class="card kpi"><p class="kpi-label">Tasa de conversión</p><p class="kpi-value">3,8%</p><p class="delta up">▲ 0,6 pts <small>vs. mes anterior</small></p></article>
+        <article class="card kpi"><p class="kpi-label">Tráfico web</p><p class="kpi-value">8.924</p><p class="delta down">▼ 2,1% <small>vs. mes anterior</small></p></article>
+        <article class="card kpi"><p class="kpi-label">Pedidos recientes</p><p class="kpi-value">64</p><p class="delta up">▲ 9 <small>esta semana</small></p></article>
+      </section>
+
+      <div class="grid-2">
+        <section class="card">
+          <div class="card-head">
+            <h2>Ventas por rango de fechas</h2>
+            <div style="display:flex;gap:8px">
+              <select class="select" style="width:auto" aria-label="Rango de fechas"><option>Últimos 7 días</option><option selected>Últimos 30 días</option><option>Este año</option></select>
+            </div>
+          </div>
+          <div class="chart-box"><svg viewBox="0 0 640 240" role="img" aria-label="Gráfico de líneas de ingresos"><line x1="40" x2="624" y1="14.0" y2="14.0" stroke="#E2E8F0"/><line x1="40" x2="624" y1="63.5" y2="63.5" stroke="#E2E8F0"/><line x1="40" x2="624" y1="113.0" y2="113.0" stroke="#E2E8F0"/><line x1="40" x2="624" y1="162.5" y2="162.5" stroke="#E2E8F0"/><line x1="40" x2="624" y1="212.0" y2="212.0" stroke="#E2E8F0"/><text x="32" y="18.0" text-anchor="end">137M</text><text x="32" y="67.5" text-anchor="end">103M</text><text x="32" y="117.0" text-anchor="end">68M</text><text x="32" y="166.5" text-anchor="end">34M</text><text x="32" y="216.0" text-anchor="end">0M</text><text x="40.0" y="232" text-anchor="middle">E</text><text x="93.1" y="232" text-anchor="middle">F</text><text x="146.2" y="232" text-anchor="middle">M</text><text x="199.3" y="232" text-anchor="middle">A</text><text x="252.4" y="232" text-anchor="middle">M</text><text x="305.5" y="232" text-anchor="middle">J</text><text x="358.5" y="232" text-anchor="middle">J</text><text x="411.6" y="232" text-anchor="middle">A</text><text x="464.7" y="232" text-anchor="middle">S</text><text x="517.8" y="232" text-anchor="middle">O</text><text x="570.9" y="232" text-anchor="middle">N</text><text x="624.0" y="232" text-anchor="middle">D</text><path d="M40.0,168.8 L93.1,147.2 L146.2,157.3 L199.3,125.6 L252.4,137.1 L305.5,104.0 L358.5,114.1 L411.6,82.4 L464.7,91.0 L517.8,53.6 L570.9,70.9 L624.0,32.0 L624.0,212 L40.0,212 Z" fill="#FDA12E" fill-opacity=".14"/><path d="M40.0,168.8 L93.1,147.2 L146.2,157.3 L199.3,125.6 L252.4,137.1 L305.5,104.0 L358.5,114.1 L411.6,82.4 L464.7,91.0 L517.8,53.6 L570.9,70.9 L624.0,32.0" fill="none" stroke="#FDA12E" stroke-width="2.5"/><circle cx="40.0" cy="168.8" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="93.1" cy="147.2" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="146.2" cy="157.3" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="199.3" cy="125.6" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="252.4" cy="137.1" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="305.5" cy="104.0" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="358.5" cy="114.1" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="411.6" cy="82.4" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="464.7" cy="91.0" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="517.8" cy="53.6" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="570.9" cy="70.9" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/><circle cx="624.0" cy="32.0" r="3.5" fill="#fff" stroke="#FDA12E" stroke-width="2"/></svg></div>
+        </section>
+
+        <section class="card">
+          <div class="card-head"><h2>Alertas del sistema</h2><span class="badge badge-danger">4</span></div>
+          <div class="alert-list">
+            <div class="alert-item"><span class="dot red"></span><div><strong>Stock crítico</strong><span>Mug “Amor de Bigotes” · 3 unidades</span></div></div>
+            <div class="alert-item"><span class="dot red"></span><div><strong>Stock crítico</strong><span>Pañoleta “Patitas Felices” · 5 unidades</span></div></div>
+            <div class="alert-item"><span class="dot"></span><div><strong>Transacción pendiente</strong><span>#ORD-987654321 · esperando pago PSE</span></div></div>
+            <div class="alert-item"><span class="dot"></span><div><strong>Transacción pendiente</strong><span>#ORD-987654318 · verificación Nequi</span></div></div>
+          </div>
+        </section>
+      </div>
+
+      <section aria-label="Accesos directos">
+        <div class="shortcuts">
+          <a href="admin-productos.html" class="card shortcut"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span><strong>Gestión de inventario</strong><span>Productos, precios y stock</span></span></a>
+          <a href="admin-estadisticas.html" class="card shortcut"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><span><strong>Control de pedidos</strong><span>Estados de envío y pagos</span></span></a>
+          <a href="admin-blog.html" class="card shortcut"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 11h8M8 15h8M8 7h4"/></svg></span><span><strong>Administración de contenidos</strong><span>Artículos y afiliados</span></span></a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

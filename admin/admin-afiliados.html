@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Afiliados | Admin Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/admin-extra.css">
+  <script src="../js/sesion-demo.js"></script>
+  <link rel="icon" type="image/png" href="../img/logo.png">
+</head>
+<body class="adm">
+
+  <!--  BARRA LATERAL FIJA  -->
+  <aside class="adm-side" aria-label="Navegación del panel">
+    <a href="admin-dashboard.html" class="adm-brand">
+      <img src="../img/logo.png" alt="Peluditos y Punto">
+      <span><strong>Peluditos y Punto</strong><small>Panel de administración</small></span>
+    </a>
+    <nav class="adm-nav">
+      <a href="admin-dashboard.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+      <a href="admin-productos.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>Gestión de productos</a>
+      <a href="admin-pedidos.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Pedidos</a>
+      <a href="admin-afiliados.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Afiliados</a>
+      <a href="admin-blog.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 11h8M8 15h8M8 7h4"/></svg>Gestión del blog</a>
+      <a href="admin-estadisticas.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Estadísticas y ventas</a>
+    </nav>
+    <div class="adm-side-foot">
+      <a href="../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><path d="M9 20v-6h6v6"/></svg> &nbsp;Ver tienda</a>
+      <a href="../login.html" data-salir><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg> &nbsp;Cerrar sesión</a>
+    </div>
+  </aside>
+
+  <div class="adm-main">
+    <header class="adm-top">
+      <div><h1 id="top-h1">Productos afiliados</h1><p id="top-sub">Enlaces a tiendas aliadas y clics recibidos</p></div>
+      <div class="adm-top-actions">
+        <button type="button" class="btn btn-primary" id="nuevo">+ Nuevo enlace</button>
+        <div class="adm-user"><span class="av" aria-hidden="true">A</span><span><strong>Administrador</strong><small>admin@peluditosypunto.co</small></span></div>
+      </div>
+    </header>
+
+    <main class="adm-content">
+      <div class="kpis k3">
+        <div class="card kpi"><div class="kpi-label">Enlaces activos</div><div class="kpi-value" id="k-act">0</div></div>
+        <div class="card kpi"><div class="kpi-label">Clics totales</div><div class="kpi-value" id="k-clics">0</div></div>
+        <div class="card kpi"><div class="kpi-label">Más clicado</div><div class="kpi-value" id="k-top" style="font-size:18px">—</div></div>
+      </div>
+      <section class="card">
+        <div class="toolbar">
+          <input class="input" type="search" id="buscar" placeholder="Buscar enlace…" aria-label="Buscar enlace">
+          <select class="select" id="f-tienda" aria-label="Filtrar por tienda"><option value="">Todas las tiendas</option></select>
+        </div>
+        <div class="table-wrap"><table class="data">
+          <thead><tr><th scope="col">Producto</th><th scope="col">Tienda</th><th scope="col">Categoría</th><th scope="col">Precio</th><th scope="col">Clics</th><th scope="col">Estado</th><th scope="col"><span style="display:block;text-align:right">Acciones</span></th></tr></thead>
+          <tbody id="tabla"></tbody></table></div>
+      </section>
+
+      <dialog id="dlg" aria-labelledby="dlg-t">
+        <form method="dialog" id="form-afi" novalidate>
+          <div class="dlg-body">
+            <h2 id="dlg-t" style="font-size:18px;color:var(--navy)">Nuevo enlace</h2>
+            <div class="field"><label for="a-nombre">Nombre del producto *</label><input class="input" id="a-nombre" required><span class="err">Escribe el nombre.</span></div>
+            <div class="grid-form">
+              <div class="field"><label for="a-tienda">Tienda aliada *</label><input class="input" id="a-tienda" list="lista-tiendas" required><datalist id="lista-tiendas"></datalist><span class="err">Escribe la tienda.</span></div>
+              <div class="field"><label for="a-cat">Categoría *</label><select class="select" id="a-cat" required><option value="">Selecciona…</option><option>Accesorios</option><option>Higiene y cuidado</option><option>Juguetes</option><option>Nutrición</option><option>Tecnología</option><option>Cursos</option></select><span class="err">Elige una categoría.</span></div>
+              <div class="field"><label for="a-precio">Precio (COP) *</label><input class="input" id="a-precio" type="number" min="0" required><span class="err">Escribe el precio.</span></div>
+              <div class="field"><label for="a-estado">Estado</label><select class="select" id="a-estado"><option value="activo">Activo</option><option value="inactivo">Inactivo</option></select></div>
+            </div>
+            <div class="field"><label for="a-url">Enlace de afiliado *</label><input class="input" id="a-url" type="url" placeholder="https://…" required><span class="err">Escribe un enlace que empiece por https://</span></div>
+            <div class="field"><label for="a-img">Imagen (ruta)</label><input class="input" id="a-img" placeholder="img/nombre.png"></div>
+          </div>
+          <div class="dlg-foot"><button type="button" class="btn btn-outline" id="cancelar">Cancelar</button><button type="submit" class="btn btn-primary">Guardar</button></div>
+        </form>
+      </dialog>
+    </main>
+  </div>
+  <script src="../js/afiliados.js"></script>
+  <script src="../js/admin-afiliados.js"></script>
+</body>
+</html>

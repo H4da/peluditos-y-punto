@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalle del pedido | Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tienda-extra.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pedidos.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="pp page-pedidos">
+
+  <!--  ENCABEZADO  -->
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo Peluditos y Punto" class="logo-img">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+
+        <div class="dropdown">
+          <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="tienda-pod.html" class="dropdown-item">Productos Personalizados</a>
+            <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-user">
+        <a href="perfil.html" class="is-current" aria-label="Mi cuenta"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg><span class="txt">Mi cuenta</span></a>
+        <a href="carrito.html" aria-label="Carrito"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 7H6"/></svg><span class="txt">Carrito</span></a>
+      </div>
+
+    </div>
+  </nav>
+
+  <main class="site-main">
+    <nav class="breadcrumb" aria-label="Ruta de navegación" style="margin-bottom:12px;font-size:14px">
+      <a href="perfil.html">Mi cuenta</a> / <a href="historial-pedidos.html">Mis Pedidos</a> / <span id="detMiga">Pedido</span>
+    </nav>
+    <h1 class="page-title" id="detTitulo">Detalle del pedido</h1>
+    <p class="page-subtitle" id="detSub"></p>
+
+    <div class="account-layout">
+      <aside class="card side-menu" aria-label="Menú de mi cuenta">
+        <div class="side-user">
+          <img src="img/gato-consentido.png" alt="">
+          <div><strong>Ada D’Agostino</strong><small>Mi cuenta</small></div>
+        </div>
+        <a href="perfil.html" class="side-link">Información Personal</a>
+        <a href="mis-peluditos.html" class="side-link">Mis Peluditos</a>
+        <a href="historial-pedidos.html" class="side-link is-active" aria-current="page">Mis Pedidos</a>
+        <a href="index.html" class="side-link is-logout">Desloguear</a>
+      </aside>
+
+      <div id="detalle"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-name">Peluditos y Punto</p>
+        <p class="footer-copy">&copy; 2026 Peluditos y Punto. Todos los derechos reservados.</p>
+      </div>
+      <nav class="footer-links" aria-label="Enlaces legales">
+        <a href="contacto.html">Contáctanos</a>
+        <a href="privacidad.html">Política de privacidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/pedidos-demo.js"></script>
+  <script src="js/pedidos.js"></script>
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pañoleta “Patitas Felices” | Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="css/vista-previa.css">
+</head>
+<body class="page-producto-pod">
+
+  <!--  ENCABEZADO  -->
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo Peluditos y Punto" class="logo-img">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+
+        <div class="dropdown">
+          <a href="#" class="nav-item active">Tienda <span class="arrow">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="tienda-pod.html" class="dropdown-item" aria-current="page">Productos Personalizados</a>
+            <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visitante-Pendiente (Con sesión activa se mostrarán Perfil y Carrito) -->
+      <a href="login.html" class="btn-login">Iniciar Sesión</a>
+
+    </div>
+  </nav>
+
+  <!--  CONTENIDO PRINCIPAL  -->
+  <main class="site-main">
+
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="tienda-pod.html">Tienda</a> /
+      <a href="tienda-pod.html">Productos Personalizados</a> /
+      <a href="tienda-pod.html" id="bc-categoria">Accesorios</a> /
+      <span id="bc-nombre">Pañoleta “Patitas Felices”</span>
+    </nav>
+
+    <!--  Detalle del producto  -->
+    <section class="product-detail">
+
+      <!-- Galería -->
+      <div class="gallery">
+        <div class="gallery-main">
+          <img id="imagen-principal" src="" alt="">
+        </div>
+
+        <div class="gallery-thumbs" id="miniaturas"></div>
+      </div>
+
+      <!-- Información y opciones -->
+      <div class="product-info">
+
+        <h1 class="product-title" id="producto-nombre">Pañoleta “Patitas Felices”</h1>
+        <p class="product-price" id="producto-precio">$18.000</p>
+        <p class="product-description" id="producto-descripcion">
+          Pañoleta suave y resistente, pensada para el uso diario de tu mascota.
+          Personalízala con su nombre o con una fotografía para que luzca
+          un diseño único.
+        </p>
+
+        <hr class="divider">
+
+        <form id="form-producto" class="product-form">
+
+          <!-- Tamaño -->
+          <fieldset class="option-group" id="grupo-talla">
+            <div class="option-header">
+              <legend>Tamaño</legend>
+              <a href="guia-tallas.html" class="size-guide" id="enlace-guia" target="_blank" rel="noopener">Guía de tallas</a>
+            </div>
+            <div class="size-options" id="opciones-talla"></div>
+          </fieldset>
+
+          <!-- Color -->
+          <fieldset class="option-group" id="grupo-color">
+            <legend>Selecciona el Color</legend>
+            <div class="color-options" id="opciones-color"></div>
+          </fieldset>
+
+          <!-- Texto personalizado -->
+          <div class="option-group">
+            <label for="texto-personalizado" class="option-label">Texto</label>
+            <input type="text" id="texto-personalizado" name="texto" class="text-input"
+                   placeholder="Ejemplo: Tati" maxlength="15">
+            <p class="field-hint">Máx. 15 caracteres</p>
+          </div>
+
+          <!-- Subir fotografía -->
+          <div class="option-group">
+            <input type="file" id="foto-mascota" name="foto" accept="image/*" class="file-input">
+            <label for="foto-mascota" class="btn btn-outline">Subir fotografía</label>
+          </div>
+
+          <!-- Acciones -->
+          <div class="product-actions">
+            <button type="submit" class="btn btn-dark">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
+                <path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 7H6"/>
+              </svg>
+              Añadir al carrito
+            </button>
+
+            <button type="button" class="btn btn-outline" id="btn-vista-previa">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              Vista Previa
+            </button>
+          </div>
+
+        </form>
+
+        <hr class="divider">
+
+        <ul class="product-meta">
+          <li><strong>Materiales:</strong> <span id="producto-materiales">100% Algodón</span></li>
+          <li><strong>Categoría:</strong> <span id="producto-categoria">Accesorios</span></li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!--  Productos relacionados  -->
+    <section class="related" aria-labelledby="relacionados-titulo">
+      <h2 id="relacionados-titulo">Productos Relacionados</h2>
+
+      <div class="related-grid" id="relacionados"></div>
+    </section>
+
+  </main>
+
+  <!--  PIE DE PÁGINA  -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-name">Peluditos y Punto</p>
+        <p class="footer-copy">&copy; 2026 Peluditos y Punto. Todos los derechos reservados.</p>
+      </div>
+      <nav class="footer-links" aria-label="Enlaces legales">
+        <a href="contacto.html">Contáctanos</a>
+        <a href="privacidad.html">Política de privacidad</a>
+    </div>
+  </footer>
+
+  <script src="js/carrito-store.js"></script>
+  <script src="js/vista-previa.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/detalle-producto.js"></script>
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

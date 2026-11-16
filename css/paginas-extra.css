@@ -1,0 +1,89 @@
+/* =========================================================
+   Páginas nuevas: contacto, privacidad, términos, envíos y
+   devoluciones, 404, pago rechazado/pendiente, nueva contraseña.
+   Todo va dentro de body.page-extra para no tocar otras páginas.
+   ========================================================= */
+.page-extra { background: #F8FAFC; color: #1E293B; font-family: "Inter", system-ui, sans-serif; }
+.page-extra .pe-main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+.page-extra .pe-crumbs { margin-bottom: 20px; font-size: 14px; color: #64748B; }
+.page-extra .pe-crumbs a { color: #64748B; text-decoration: none; }
+.page-extra .pe-crumbs a:hover { color: #0D3B66; text-decoration: underline; }
+.page-extra .pe-crumbs span { color: #0D3B66; font-weight: 600; }
+.page-extra .pe-head h1 { margin: 0 0 8px; font-size: 32px; line-height: 1.2; color: #0D3B66; }
+.page-extra .pe-head p { margin: 0; color: #64748B; }
+.page-extra .pe-card { margin-top: 24px; padding: 28px; background: #fff; border: 1px solid #E2E8F0; border-radius: 12px; }
+
+/* Texto legal */
+.page-extra .pe-legal h2 { margin: 28px 0 8px; font-size: 20px; color: #0D3B66; }
+.page-extra .pe-legal h2:first-child { margin-top: 0; }
+.page-extra .pe-legal p, .page-extra .pe-legal li { line-height: 1.7; color: #334155; }
+.page-extra .pe-legal ul { padding-left: 22px; }
+.page-extra .pe-aviso { margin-top: 24px; padding: 14px 16px; font-size: 14px; color: #7A4A00; background: #FFF3DC; border-left: 4px solid #FDA12E; border-radius: 6px; }
+
+/* Botones */
+.page-extra .pe-btn { display: inline-block; padding: 12px 22px; font: inherit; font-weight: 600; text-decoration: none; text-align: center; cursor: pointer; border: 2px solid #FDA12E; border-radius: 8px; background: #FDA12E; color: #0D3B66; transition: background .2s, color .2s; }
+.page-extra .pe-btn:hover { background: #E07A00; border-color: #E07A00; }
+.page-extra .pe-btn.outline { background: #fff; border-color: #0D3B66; color: #0D3B66; }
+.page-extra .pe-btn.outline:hover { background: #0D3B66; color: #fff; }
+
+/* Contacto */
+.page-extra .pe-contact { display: grid; grid-template-columns: 1fr 1.5fr; gap: 24px; align-items: start; }
+.page-extra .pe-contact .pe-card { margin-top: 24px; }
+.page-extra .pe-info h2, .page-extra .pe-formbox h2 { margin: 0 0 16px; font-size: 20px; color: #0D3B66; }
+.page-extra .pe-info dl { margin: 0; }
+.page-extra .pe-info dt { margin-top: 14px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #64748B; }
+.page-extra .pe-info dd { margin: 2px 0 0; }
+.page-extra .pe-field { margin-bottom: 16px; }
+.page-extra .pe-field label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; }
+.page-extra .pe-input { width: 100%; padding: 11px 12px; font: inherit; color: inherit; background: #fff; border: 1px solid #CBD5E1; border-radius: 8px; box-sizing: border-box; }
+.page-extra .pe-input:focus { outline: 2px solid #FDA12E; outline-offset: 1px; border-color: #FDA12E; }
+.page-extra textarea.pe-input { min-height: 140px; resize: vertical; }
+.page-extra .pe-error { display: none; margin-top: 4px; font-size: 13px; color: #B91C1C; }
+.page-extra .pe-field.invalid .pe-input { border-color: #B91C1C; }
+.page-extra .pe-field.invalid .pe-error { display: block; }
+.page-extra .pe-ok { margin: 16px 0 0; padding: 12px 14px; color: #166534; background: #DCFCE7; border-radius: 8px; }
+
+/* Estados (404, pago rechazado) */
+.page-extra .pe-status { max-width: 640px; margin: 0 auto; text-align: center; }
+.page-extra .pe-status .pe-icon { display: grid; place-items: center; width: 84px; height: 84px; margin: 0 auto 20px; font-size: 38px; font-weight: 700; border-radius: 50%; }
+.page-extra .pe-icon.warn { color: #B45309; background: #FFF3DC; }
+.page-extra .pe-icon.bad { color: #B91C1C; background: #FEE2E2; }
+.page-extra .pe-icon.wait { color: #0D3B66; background: #E0ECF8; }
+.page-extra .pe-status h1 { margin: 0 0 10px; font-size: 30px; color: #0D3B66; }
+.page-extra .pe-status p { margin: 0 0 8px; color: #475569; line-height: 1.6; }
+.page-extra .pe-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+.page-extra .pe-reasons { margin: 20px auto 0; padding: 16px 20px 16px 38px; max-width: 460px; text-align: left; background: #fff; border: 1px solid #E2E8F0; border-radius: 10px; color: #475569; }
+.page-extra .pe-reasons li { margin: 4px 0; }
+.page-extra .pe-code { display: inline-block; margin-top: 12px; padding: 4px 10px; font-size: 13px; color: #64748B; background: #E2E8F0; border-radius: 6px; }
+
+/* Envíos y devoluciones */
+.page-extra .pe-table { width: 100%; border-collapse: collapse; margin: 12px 0 8px; font-size: 15px; }
+.page-extra .pe-table th, .page-extra .pe-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #E2E8F0; }
+.page-extra .pe-table th { color: #0D3B66; background: #F1F5F9; }
+.page-extra .pe-steps { padding-left: 22px; }
+
+/* Nueva contraseña: indicador de requisitos y ojo */
+.page-extra-auth .pw-rules { margin: 8px 0 0; padding: 0; list-style: none; font-size: 13px; color: #64748B; }
+.page-extra-auth .pw-rules li::before { content: "○ "; }
+.page-extra-auth .pw-rules li.ok { color: #166534; }
+.page-extra-auth .pw-rules li.ok::before { content: "● "; }
+.page-extra-auth .pw-error { margin: 8px 0 0; font-size: 13px; color: #B91C1C; }
+
+@media (max-width: 760px) {
+  .page-extra .pe-contact { grid-template-columns: 1fr; }
+  .page-extra .pe-head h1 { font-size: 26px; }
+  .page-extra .pe-card { padding: 20px; }
+  .page-extra .pe-table { font-size: 14px; }
+}
+
+/* Pie de página (mismo aspecto que el de la tienda) */
+.page-extra .site-footer { margin-top: 40px; background: #0D3B66; color: #fff; border-top: 3px solid #FDA12E; }
+.page-extra .footer-container { max-width: 1200px; margin: 0 auto; padding: 28px 40px; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.page-extra .footer-name { margin: 0 0 6px; font-size: 18px; font-weight: 700; }
+.page-extra .footer-copy { margin: 0; font-size: 13px; color: rgba(255,255,255,.75); }
+.page-extra .footer-links { display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14px; }
+.page-extra .footer-links a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.page-extra .footer-links a:hover { color: #FDA12E; }
+@media (max-width: 760px) {
+  .page-extra .footer-container { flex-direction: column; padding: 28px 16px; }
+}

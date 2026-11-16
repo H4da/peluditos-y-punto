@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Cuenta - Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Peluditos y Punto" class="logo-img">
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+        </div>
+      </nav>
+
+      <div class="nav-auth">
+        <a href="login.html" class="btn-login">Inicio de Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL DE REGISTRO  -->
+  <main class="auth-container">
+    
+    <!-- 1. BLOQUE INFORMATIVO IZQUIERDO -->
+    <div class="auth-banner register-banner">
+      <div class="auth-banner-content">
+        <h1 class="auth-banner-title">Únete a la Familia</h1>
+        <p class="auth-banner-text">
+          Crea tu cuenta en Peluditos y Punto para acceder a ofertas exclusivas, guardar el perfil de tus mascotas y gestionar tus compras fácilmente.
+        </p>
+      </div>
+  </div>
+
+    <!-- 2. FORMULARIO DE REGISTRO DERECHO -->
+    <div class="auth-form-container">
+      <div class="auth-form-header">
+        <span class="auth-subtitle">REGISTRO</span>
+        <h2 class="auth-title">Crear Cuenta</h2>
+        <p class="auth-desc">Por favor, ingresa tus datos:</p>
+      </div>
+
+      <form class="auth-form" id="registerForm">
+        
+        <!-- NOMBRES Y APELLIDOS  -->
+        <div class="form-group">
+          <label for="fullName" class="form-label">Nombres y Apellidos *</label>
+          <div class="input-icon-wrapper">
+            <span class="input-icon">👤</span>
+            <input 
+              type="text" 
+              id="fullName" 
+              name="fullName" 
+              class="form-input" 
+              placeholder="Ej. Juan Pérez" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- FILA COMBINADA -->
+        <div class="form-row-group">
+          <div class="form-group flex-small">
+            <label for="docType" class="form-label">Tipo *</label>
+            <div class="input-icon-wrapper">
+              <select id="docType" name="docType" class="form-input form-select" required>
+                <option value="CC" selected>C.C.</option>                
+                <option value="CE">C.E.</option>
+                <option value="PAS">Pasaporte</option>
+                <option value="OTRO">Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group flex-large">
+            <label for="docNumber" class="form-label">Nro. Documento *</label>
+            <div class="input-icon-wrapper">
+              <span class="input-icon">🪪</span>
+              <input 
+                type="text" 
+                id="docNumber" 
+                name="docNumber" 
+                class="form-input" 
+                placeholder="1023002260" 
+                required
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- CORREO ELECTRÓNICO -->
+        <div class="form-group">
+          <label for="email" class="form-label">Correo electrónico *</label>
+          <div class="input-icon-wrapper">
+            <span class="input-icon">✉</span>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              placeholder="name@company.com" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- CONTRASEÑA -->
+        <div class="form-group">
+          <label for="password" class="form-label">Contraseña *</label>
+          <div class="input-icon-wrapper">
+            <span class="input-icon">🔒</span>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              class="form-input" 
+              placeholder="Ej. ka122*" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- CONFIRMAR CONTRASEÑA -->
+        <div class="form-group">
+          <label for="confirmPassword" class="form-label">Confirmar contraseña *</label>
+          <div class="input-icon-wrapper">
+            <span class="input-icon">🔒</span>
+            <input 
+              type="password" 
+              id="confirmPassword" 
+              name="confirmPassword" 
+              class="form-input" 
+              placeholder="Repite tu contraseña" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- CHECKBOX TÉRMINOS Y CONDICIONES -->
+        <div class="form-group terms-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="terms" required>
+            <span class="terms-text">
+              He leído y acepto los <a href="terminos.html" class="terms-link" target="_blank" rel="noopener">Términos de Servicio</a> y autorizo el uso de mis datos según la <a href="privacidad.html" class="terms-link" target="_blank" rel="noopener">Política de Privacidad</a>.
+            </span>
+          </label>
+        </div>
+
+        <!-- BOTÓN DE ACCIÓN -->
+        <button type="submit" class="btn-submit">
+          Crear cuenta &rarr;
+        </button>
+
+        <!-- ENLACE A LOGIN -->
+        <div class="form-footer">
+          <p>¿Ya tienes una cuenta? <a href="login.html" class="register-link">Inicia sesión</a></p>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

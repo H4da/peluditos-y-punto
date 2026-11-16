@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos Personalizados | Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="page-tienda-pod">
+  
+  <!--  ENCABEZADO  -->
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo Peluditos y Punto" class="logo-img">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+
+        <div class="dropdown">
+          <a href="#" class="nav-item active">Tienda <span class="arrow">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="tienda-pod.html" class="dropdown-item" aria-current="page">Productos Personalizados</a>
+            <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visitante - Pendiente (Con sesión activa se mostrarán Perfil y Carrito)-->
+      <a href="login.html" class="btn-login">Iniciar Sesión</a>
+
+    </div>
+  </nav>
+
+  <!--  CONTENIDO PRINCIPAL  -->
+  <main class="site-main">
+
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="tienda-pod.html">Tienda</a> / <span>Productos Personalizados</span>
+    </nav>
+
+    <div class="catalog-layout">
+
+      <!-- Filtros  -->
+      <aside class="filters" aria-label="Filtros del catálogo">
+        <h2 class="filters-title">Filtros</h2>
+
+        <form id="form-filtros" class="filters-form">
+
+          <fieldset class="filter-group">
+            <legend>Categoría</legend>
+            <label><input type="checkbox" name="categoria" value="mugs"> Mugs</label>
+            <label><input type="checkbox" name="categoria" value="camisetas"> Camisetas</label>
+            <label><input type="checkbox" name="categoria" value="pañoletas"> Pañoletas</label>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Diseño</legend>
+            <label><input type="checkbox" name="diseno" value="nombre"> Nombre</label>
+            <label><input type="checkbox" name="diseno" value="imagen"> Imagen</label>
+            <label><input type="checkbox" name="diseno" value="prediseñado"> Prediseñado</label>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Rango de precio</legend>
+            <div class="price-range">
+              <input type="number" name="precio_min" placeholder="Min" min="0" aria-label="Precio mínimo">
+              <span class="price-separator">-</span>
+              <input type="number" name="precio_max" placeholder="Max" min="0" aria-label="Precio máximo">
+            </div>
+          </fieldset>
+
+          <div class="filter-buttons">
+            <button type="submit" class="btn btn-outline">Aplicar Filtros</button>
+            <button type="reset" class="btn btn-outline">Limpiar Filtros</button>
+          </div>
+
+        </form>
+      </aside>
+
+      <!--  Catálogo  -->
+      <section class="catalog" aria-labelledby="catalogo-titulo">
+
+        <div class="catalog-header">
+          <h1 id="catalogo-titulo">Catálogo</h1>
+          <div class="sort-by">
+            <label for="ordenar">Ordenar por:</label>
+            <select id="ordenar" name="ordenar">
+              <option value="recomendado" selected>Recomendados</option>
+              <option value="precio-asc">Precio: menor a mayor</option>
+              <option value="precio-desc">Precio: mayor a menor</option>
+              <option value="recientes">Más recientes</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="result-count" id="resultados" role="status" aria-live="polite"></p>
+        <div class="product-grid" id="catalogo-grid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA  -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-name">Peluditos y Punto</p>
+        <p class="footer-copy">&copy; 2026 Peluditos y Punto. Todos los derechos reservados.</p>
+      </div>
+      <nav class="footer-links" aria-label="Enlaces legales">
+        <a href="contacto.html">Contáctanos</a>
+        <a href="privacidad.html">Política de privacidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/carrito-store.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/catalogo.js"></script>
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

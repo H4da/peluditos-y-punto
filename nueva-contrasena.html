@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva contraseña | Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tienda-extra.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/paginas-extra.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="page-extra-auth page-extra">
+
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo Peluditos y Punto" class="logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="tienda-pod.html" class="dropdown-item">Productos Personalizados</a>
+            <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+          </div>
+        </div>
+      </div>
+      <a href="login.html" class="btn-login">Inicio de Sesión</a>
+    </div>
+  </nav>
+
+  <main class="auth-container">
+    <div class="auth-banner">
+      <div class="auth-banner-content">
+        <h1 class="auth-banner-title">Crea una contraseña nueva</h1>
+        <p class="auth-banner-text">Elige una contraseña segura que no uses en otros sitios. Después podrás iniciar sesión y seguir consintiendo a tu peludito.</p>
+      </div>
+    </div>
+
+    <div class="auth-form-container">
+      <div class="auth-form-header">
+        <span class="auth-subtitle">RECUPERACIÓN</span>
+        <h2 class="auth-title">Nueva contraseña</h2>
+        <p class="auth-desc">Escribe y confirma tu nueva contraseña.</p>
+      </div>
+
+      <form class="auth-form" id="newPassForm" novalidate>
+        <div class="form-group">
+          <label for="pass1" class="form-label">Nueva contraseña *</label>
+          <input type="password" id="pass1" class="form-input" autocomplete="new-password" required>
+          <ul class="pw-rules" aria-label="Requisitos de la contraseña">
+            <li data-regla="largo">Mínimo 8 caracteres</li>
+            <li data-regla="mayus">Una letra mayúscula</li>
+            <li data-regla="num">Un número</li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label for="pass2" class="form-label">Confirmar contraseña *</label>
+          <input type="password" id="pass2" class="form-input" autocomplete="new-password" required>
+          <p class="pw-error" id="passError" role="alert"></p>
+        </div>
+        <button type="submit" class="btn-submit">Guardar contraseña &rarr;</button>
+        <div class="form-footer">
+          <p><a href="login.html" class="register-link">&larr; Volver a inicio de sesión</a></p>
+        </div>
+      </form>
+
+      <div class="recover-msg" id="passOk" role="status" aria-live="polite" hidden>
+        <p>¡Listo! Tu contraseña se actualizó correctamente.</p>
+        <p><a href="login.html" class="register-link">Iniciar sesión &rarr;</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/paginas-extra.js"></script>
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* =========================================================
+   Ajustes para celular y tablet
+   ========================================================= */
+
+/* ---------- Tablet (hasta 900 px) ---------- */
+@media (max-width: 900px) {
+  .hero-overlay { padding: 64px 40px 40px 56px; }
+  .hero-features { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+}
+
+/* ---------- Celular (hasta 680 px) ---------- */
+@media (max-width: 680px) {
+
+  /* --- Barra de navegación compacta --- */
+  .navbar .nav-container { padding: 0 12px; }
+  .navbar .logo-wrapper { left: 10px; top: 6px; width: 64px; height: 64px; padding: 3px; }
+  .navbar .nav-links { margin-left: 80px; gap: 14px; }
+  .navbar .nav-item { font-size: 14px; }
+  .navbar .btn-login { padding: 6px 10px; font-size: 13px; white-space: nowrap; }
+  .navbar .nav-user { gap: 6px; }
+
+  /* El submenú de Tienda ocupa el ancho de la pantalla */
+  .navbar .dropdown { position: static !important; }
+  .navbar .dropdown-menu {
+    left: 12px; right: 12px; top: 100%;
+    min-width: 0; width: auto;
+  }
+  .navbar .dropdown-item { white-space: normal; }
+
+  /*  Inicio  */
+  .hero-overlay {
+    padding: 36px 20px 32px;
+    background: linear-gradient(180deg, rgba(13, 59, 102, 0.92) 0%, rgba(13, 59, 102, 0.78) 100%);
+  }
+  .hero-title { font-size: 30px; }
+  .hero-subtitle { font-size: 16px; }
+  .hero-features { grid-template-columns: 1fr; gap: 22px; margin-top: 36px; }
+
+  /* Formularios de acceso  */
+  .auth-form-container { padding: 32px 20px; }
+  .form-row-group { flex-direction: column; gap: 0; }
+}
+
+/*  Celulares muy angostos (hasta 380 px)  */
+@media (max-width: 380px) {
+  .navbar .nav-links { gap: 10px; margin-left: 76px; }
+  .navbar .nav-item { font-size: 13px; }
+  .navbar .btn-login { padding: 6px 8px; font-size: 12px; }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orden Confirmada | Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tienda-extra.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="pp page-orden">
+
+  <!--  ENCABEZADO  -->
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo Peluditos y Punto" class="logo-img">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+
+        <div class="dropdown">
+          <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="tienda-pod.html" class="dropdown-item">Productos Personalizados</a>
+            <a href="catalogo-afiliados.html" class="dropdown-item">Productos Recomendados</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-user">
+        <a href="perfil.html" class="" aria-label="Mi cuenta"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg><span class="txt">Mi cuenta</span></a>
+        <a href="carrito.html" aria-label="Carrito"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 7H6"/></svg><span class="txt">Carrito</span></a>
+      </div>
+
+    </div>
+  </nav>
+
+  <main class="site-main">
+    <div class="order-wrap">
+
+      <header class="order-status">
+        <span class="order-check"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h1>Orden confirmada</h1>
+        <p>¡Gracias por tu compra! Te enviamos el comprobante a tu correo. Estamos preparando tus productos con mucho cariño.</p>
+      </header>
+
+      <section class="card order-meta" aria-label="Datos del pedido">
+        <div>
+          <p class="meta-label">Número de orden</p>
+          <p class="meta-value">#ORD-987654321</p>
+        </div>
+        <div>
+          <p class="meta-label">Fecha de entrega estimada</p>
+          <p class="meta-value">15 – 20 de octubre de 2026</p>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:20px" aria-label="Productos de la orden">
+        <table class="order-table">
+          <thead>
+            <tr><th scope="col">Producto</th><th scope="col">Cantidad</th><th scope="col">Precio</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="order-product">
+                  <img src="img/panoleta-feliz.png" alt="">
+                  <div><strong>Pañoleta “Patitas Felices”</strong><small>Color: Rojo | Talla: M</small></div>
+                </div>
+              </td>
+              <td>1</td>
+              <td>$18.000</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="order-product">
+                  <img src="img/camiseta-humano-fav.jpg" alt="">
+                  <div><strong>Camiseta “Mi Humano Favorito”</strong><small>Color: Negro | Talla: L</small></div>
+                </div>
+              </td>
+              <td>1</td>
+              <td>$45.000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <dl class="order-totals" style="border-top:1px solid var(--border)">
+          <div class="summary-row"><dt>Subtotal</dt><dd>$63.000</dd></div>
+          <div class="summary-row"><dt>Envío</dt><dd>$15.000</dd></div>
+          <div class="summary-row"><dt>Impuestos</dt><dd>$0</dd></div>
+          <div class="summary-row summary-total"><dt>Total</dt><dd>$78.000</dd></div>
+        </dl>
+      </section>
+
+      <div class="order-actions">
+        <a href="tienda-pod.html" class="btn btn-outline">&larr; Atrás</a>
+        <a href="detalle-pedido.html?id=ORD-987654321" class="btn btn-outline">Ver mi pedido</a>
+        <button type="button" class="btn btn-primary" onclick="window.print()"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M6 14h12v7H6z"/></svg> Imprimir</button>
+      </div>
+
+      <section aria-labelledby="rec-titulo">
+        <h2 class="rec-title" id="rec-titulo">Puede que también te guste</h2>
+        <div class="rec-grid">
+          <a href="producto-pod.html?id=2" class="card rec-card"><img src="img/mug-bigotes.png" alt=""><div><h3>Mug “Amor de Bigotes”</h3><p>$25.000</p></div></a>
+          <a href="producto-pod.html?id=4" class="card rec-card"><img src="img/panoleta-mi-mejor-amigo.jpg" alt=""><div><h3>Pañoleta “Mi Mejor Amigo”</h3><p>$25.000</p></div></a>
+          <a href="producto-pod.html?id=1" class="card rec-card"><img src="img/camiseta-sol-y-luna.png" alt=""><div><h3>Camiseta “Sol y Luna”</h3><p>$45.000</p></div></a>
+          <a href="producto-pod.html?id=3" class="card rec-card"><img src="img/panoleta-4-estaciones.png" alt=""><div><h3>Pañoleta “4 Estaciones”</h3><p>$25.000</p></div></a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!--  PIE DE PÁGINA  -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-name">Peluditos y Punto</p>
+        <p class="footer-copy">&copy; 2026 Peluditos y Punto. Todos los derechos reservados.</p>
+      </div>
+      <nav class="footer-links" aria-label="Enlaces legales">
+        <a href="contacto.html">Contáctanos</a>
+        <a href="privacidad.html">Política de privacidad</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/sesion-demo.js"></script>
+</body>
+</html>

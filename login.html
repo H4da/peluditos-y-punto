@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Peluditos y Punto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="navbar">
+    <div class="nav-container">
+      <!-- LOGO  -->
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="Peluditos y Punto" class="logo-img">
+      </a>
+      
+      <!-- ENLACES CENTRALES -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">Tienda <span class="arrow">&#9662;</span></a>
+        </div>
+      </nav>
+
+      <!-- BOTÓN DE NAVEGACIÓN DERECHA -->
+      <div class="nav-auth">
+        <a href="login.html" class="btn-login">Inicio de Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL DE AUTENTICACIÓN  -->
+  <main class="auth-container">
+    
+    <!-- 1. BLOQUE INFORMATIVO (IZQUIERDA) -->
+    <div class="auth-banner">
+      <div class="auth-banner-content">
+        <h1 class="auth-banner-title">Peluditos y Punto</h1>
+        <p class="auth-banner-text">
+          ¿Listo para consentir a tu mejor amigo? Inicia sesión para ver productos personalizados, recibir nuestro boletín y mucho más.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. FORMULARIO DE AUTENTICACIÓN (DERECHA) -->
+    <div class="auth-form-container">
+      <div class="auth-form-header">
+        <span class="auth-subtitle">AUTENTICACIÓN</span>
+        <h2 class="auth-title">Iniciar Sesión</h2>
+        <p class="auth-desc">Por favor, ingresa tus datos:</p>
+      </div>
+
+      <form class="auth-form" id="loginForm">
+        <!-- CAMPO CORREO -->
+        <div class="form-group">
+          <label for="email" class="form-label">Correo *</label>
+          <div class="input-icon-wrapper">
+            <span class="input-icon">✉</span>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              placeholder="name@company.com" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- CAMPO CONTRASEÑA -->
+        <div class="form-group">
+          <div class="label-with-link">
+            <label for="password" class="form-label">Contraseña *</label>
+            <a href="recuperar-contrasena.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="input-icon-wrapper">
+            <span class="input-icon">🔒</span>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              class="form-input" 
+              placeholder="••••••••" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- BOTÓN DE ACCIÓN -->
+        <button type="submit" class="btn-submit">
+          Iniciar Sesión &rarr;
+        </button>
+
+        <!-- ENLACE A REGISTRO -->
+        <div class="form-footer">
+          <p>¿Aún no tienes una cuenta? <a href="register.html" class="register-link">Regístrate</a></p>
+        </div>
+      </form>
+    </div>
+    </main>
+
+  <script src="js/login-demo.js"></script>
+</body>
+</html>
